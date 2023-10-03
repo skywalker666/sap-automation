@@ -304,7 +304,6 @@ variable "Agent_IP" {
   default     = ""
 }
 
-
 variable "vm_settings" {
   description = "Details of the jumpbox to deploy"
   default = {

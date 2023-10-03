@@ -121,6 +121,12 @@ variable "place_delete_lock_on_resources" {
   description = "If defined, a delete lock will be placed on the key resources"
 }
 
+variable "Agent_IP" {
+  description = "If provided, contains the IP address of the agent"
+  type        = string
+  default     = ""
+}
+
 variable "bootstrap" {
 
 }

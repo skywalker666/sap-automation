@@ -55,7 +55,7 @@ resource "azurerm_storage_account_network_rules" "storage_tfstate" {
       local.deployer_public_ip_address
     ]) : compact(
     [
-      try(var.deployer_tfstate.Agent_IP, "")
+      try(var.Agent_IP, ""),
     ]
   )
 
@@ -249,7 +249,7 @@ resource "azurerm_storage_account_network_rules" "storage_sapbits" {
       local.deployer_public_ip_address
     ]) : compact(
     [
-      try(var.deployer_tfstate.Agent_IP, "")
+      try(var.Agent_IP, ""),
     ]
   )
   virtual_network_subnet_ids = local.virtual_additional_network_ids
